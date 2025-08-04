@@ -1,4 +1,4 @@
-# Project Bolt SB1
+# Project Portfolio Using Bolt (Inspired by Gen AI Masterclass ) 
 
 A personal portfolio website for Keyur Ganorkar, showcasing skills, projects, experience, and contact information.
 
