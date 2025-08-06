@@ -295,7 +295,7 @@ class UtilityManager {
 
     init() {
         this.setupBackToTop();
-        this.setupResumeDownload();
+        //this.setupResumeDownload();
         this.setupTypingEffect();
     }
 
@@ -318,106 +318,106 @@ class UtilityManager {
         });
     }
 
-    setupResumeDownload() {
-        const resumeBtn = document.getElementById('download-resume');
+//     setupResumeDownload() {
+//         const resumeBtn = document.getElementById('download-resume');
         
-        resumeBtn.addEventListener('click', (e) => {
-            e.preventDefault();
+//         resumeBtn.addEventListener('click', (e) => {
+//             e.preventDefault();
             
-            // Create a simple resume content
-            const resumeContent = this.generateResumeContent();
-            const blob = new Blob([resumeContent], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
+//             // Create a simple resume content
+//             const resumeContent = this.generateResumeContent();
+//             const blob = new Blob([resumeContent], { type: 'text/plain' });
+//             const url = URL.createObjectURL(blob);
             
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Keyur_Ganorkar_Resume.txt';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-        });
-    }
+//             const a = document.createElement('a');
+//             a.href = url;
+//             a.download = 'Keyur_Ganorkar_Resume.pdf';
+//             document.body.appendChild(a);
+//             a.click();
+//             document.body.removeChild(a);
+//             URL.revokeObjectURL(url);
+//         });
+//     }
 
-    generateResumeContent() {
-        return `
-KEYUR GANORKAR
-IoT & Cybersecurity Engineer
-Email: keyurganorkar@gmail.com
-Phone: +91 7470311686
-Location: Jabalpur, Madhya Pradesh, India
+//     generateResumeContent() {
+//         return `
+// KEYUR GANORKAR
+// IoT & Cybersecurity Engineer
+// Email: keyurganorkar@gmail.com
+// Phone: +91 7470311686
+// Location: Jabalpur, Madhya Pradesh, India
 
-LinkedIn: https://www.linkedin.com/in/keyur-ganorkar-5709ba255
-GitHub: https://github.com/Keyur-Ganorkar
-LeetCode: https://leetcode.com/u/Keyur_G
-GeeksforGeeks: https://www.geeksforgeeks.org/user/keyurg2498/
+// LinkedIn: https://www.linkedin.com/in/keyur-ganorkar-5709ba255
+// GitHub: https://github.com/Keyur-Ganorkar
+// LeetCode: https://leetcode.com/u/Keyur_G
+// GeeksforGeeks: https://www.geeksforgeeks.org/user/keyurg2498/
 
-EDUCATION
---------
-BTech, CSE with specialization in IoT, Cybersecurity including Blockchain Technology
-Gyan Ganga Institute of Technology And Sciences
-2021 – 2025 | Jabalpur, India | CGPA: 8.46
+// EDUCATION
+// --------
+// BTech, CSE with specialization in IoT, Cybersecurity including Blockchain Technology
+// Gyan Ganga Institute of Technology And Sciences
+// 2021 – 2025 | Jabalpur, India | CGPA: 8.46
 
-Secondary Education
-Kendriya Vidyalaya No.1 G.C.F
-2019 – 2021 | Jabalpur, India | 87%
+// Secondary Education
+// Kendriya Vidyalaya No.1 G.C.F
+// 2019 – 2021 | Jabalpur, India | 87%
 
-EXPERIENCE
-----------
-Kognivera Mentorship Program (Aug 2024 – Oct 2024)
-- Worked on real-life industrial project to enhance online learning
-- Focused on automating scholarship program management using Agile methodology
+// EXPERIENCE
+// ----------
+// Kognivera Mentorship Program (Aug 2024 – Oct 2024)
+// - Worked on real-life industrial project to enhance online learning
+// - Focused on automating scholarship program management using Agile methodology
 
-Teaching Assistant (2023)
-- Provided training on Arduino programming using Arduino, Node MCU, and Arduino IDE
-- Worked under Prof. UN Bera at Gyan Ganga Institute of Technology and Science
+// Teaching Assistant (2023)
+// - Provided training on Arduino programming using Arduino, Node MCU, and Arduino IDE
+// - Worked under Prof. UN Bera at Gyan Ganga Institute of Technology and Science
 
-Research Work (2023)
-- Participated in research on advanced irrigation mechanisms
-- Presented at 13th IEEE International Conference
+// Research Work (2023)
+// - Participated in research on advanced irrigation mechanisms
+// - Presented at 13th IEEE International Conference
 
-PROJECTS
---------
-1. Scholarship Management Automation (Aug 2024 – Oct 2024)
-   - Developed web application using .NET framework
-   - Created Java mobile application with MySQL database
+// PROJECTS
+// --------
+// 1. Scholarship Management Automation (Aug 2024 – Oct 2024)
+//    - Developed web application using .NET framework
+//    - Created Java mobile application with MySQL database
 
-2. Smart Irrigation System - PATENTED (Sep 2023 – Nov 2023)
-   - IoT-based AI-powered irrigation system
-   - Patent No: 413505-001, Government of India
+// 2. Smart Irrigation System - PATENTED (Sep 2023 – Nov 2023)
+//    - IoT-based AI-powered irrigation system
+//    - Patent No: 413505-001, Government of India
 
-3. Automated Greenhouse Management (May 2023 – Jun 2023)
-   - Reduced energy consumption by 30%
-   - Improved crop quality by 20%
+// 3. Automated Greenhouse Management (May 2023 – Jun 2023)
+//    - Reduced energy consumption by 30%
+//    - Improved crop quality by 20%
 
-4. Hospital Management System (2022)
-   - Created using C++ for streamlined administration
+// 4. Hospital Management System (2022)
+//    - Created using C++ for streamlined administration
 
-SKILLS
-------
-Programming: C++, Python, Arduino, HTML, CSS, SQL
-Technologies: IoT, Cybersecurity, Blockchain, .NET, MySQL
-Tools: Adobe Photoshop, Lightroom, Wondershare Filmora
-Operating Systems: Linux, Windows
+// SKILLS
+// ------
+// Programming: C++, Python, Arduino, HTML, CSS, SQL
+// Technologies: IoT, Cybersecurity, Blockchain, .NET, MySQL
+// Tools: Adobe Photoshop, Lightroom, Wondershare Filmora
+// Operating Systems: Linux, Windows
 
-CERTIFICATIONS
---------------
-- Ethical Hacking
-- Linux Fundamental
-- AWS Academy Cloud Foundations
-- Programming Essentials in C++
-- Introduction to Cybersecurity
-- CCNAv7: Introduction to Networks
-- Programming Essentials in Python
+// CERTIFICATIONS
+// --------------
+// - Ethical Hacking
+// - Linux Fundamental
+// - AWS Academy Cloud Foundations
+// - Programming Essentials in C++
+// - Introduction to Cybersecurity
+// - CCNAv7: Introduction to Networks
+// - Programming Essentials in Python
 
-AWARDS
-------
-- Winner, Smart India Hackathon (2023)
-- Patent Granted for Smart Irrigation System (2024)
-- Winner, Inter-School Football Competition (2016)
-- Winner, 5th International Mathematics Olympiad (2011)
-        `.trim();
-    }
+// AWARDS
+// ------
+// - Winner, Smart India Hackathon (2023)
+// - Patent Granted for Smart Irrigation System (2024)
+// - Winner, Inter-School Football Competition (2016)
+// - Winner, 5th International Mathematics Olympiad (2011)
+//         `.trim();
+//     }
 
     setupTypingEffect() {
         const subtitle = document.querySelector('.hero-subtitle');
@@ -542,3 +542,31 @@ class App {
 
 // Start the application
 new App();
+
+// Resume Download Handler
+document.addEventListener('DOMContentLoaded', function () {
+    const resumeBtn = document.querySelector('.resume-download a');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', function (e) {
+            const href = resumeBtn.getAttribute('href');
+            if (!href.endsWith('.pdf')) {
+                e.preventDefault();
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Resume Not Found',
+                    text: 'Resume PDF not found!',
+                    confirmButtonColor: '#2563eb'
+                });
+                return;
+            }
+            Swal.fire({
+                icon: 'success',
+                title: 'Download Started',
+                text: 'Your resume PDF is downloading!',
+                timer: 1500,
+                showConfirmButton: false
+            });
+            // Default behavior will download the PDF
+        });
+    }
+});
