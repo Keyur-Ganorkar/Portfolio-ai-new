@@ -216,6 +216,32 @@ class ContactFormManager {
         this.form.addEventListener('submit', (e) => this.handleSubmit(e));
     }
 
+    // async handleSubmit(e) {
+    //     e.preventDefault();
+        
+    //     const submitBtn = this.form.querySelector('button[type="submit"]');
+    //     const originalText = submitBtn.textContent;
+        
+    //     // Show loading state
+    //     submitBtn.innerHTML = '<span class="loading"></span> Sending...';
+    //     submitBtn.disabled = true;
+
+    //     try {
+    //         // Simulate form submission (replace with actual form handling)
+    //         await this.simulateFormSubmission();
+            
+    //         // Show success message
+    //         this.showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
+    //         this.form.reset();
+    //     } catch (error) {
+    //         // Show error message
+    //         this.showMessage('Failed to send message. Please try again.', 'error');
+    //     } finally {
+    //         // Reset button
+    //         submitBtn.textContent = originalText;
+    //         submitBtn.disabled = false;
+    //     }
+    // }
     async handleSubmit(e) {
         e.preventDefault();
         
@@ -229,19 +255,37 @@ class ContactFormManager {
         try {
             // Simulate form submission (replace with actual form handling)
             await this.simulateFormSubmission();
-            
-            // Show success message
-            this.showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
+
+            // ✅ SweetAlert2 success toast
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'success',
+                title: 'Message sent successfully!',
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true
+            });
+
             this.form.reset();
         } catch (error) {
-            // Show error message
-            this.showMessage('Failed to send message. Please try again.', 'error');
+            // ❌ SweetAlert2 error toast
+            Swal.fire({
+                toast: true,
+                position: 'top-end',
+                icon: 'error',
+                title: 'Failed to send message. Please try again.',
+                showConfirmButton: false,
+                timer: 2000,
+                timerProgressBar: true
+            });
         } finally {
             // Reset button
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }
     }
+
 
     simulateFormSubmission() {
         return new Promise((resolve) => {
